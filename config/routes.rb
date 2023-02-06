@@ -5,5 +5,5 @@ root to: "homes#top"
 resources :users, only: [:edit, :show, :update, :index,]
 resources :books, only: [:edit, :create, :index, :update, :show, :destroy]
 get "/homes/about" => "homes#about", as: "about"
-post "/users/:id" => "books#show"
+# post "/users/:id" => "books#show"
 end

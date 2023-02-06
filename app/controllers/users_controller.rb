@@ -16,6 +16,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     # @user = current_user
     @books = @user.books
+    @book = Book.new
     #controllerになくてもいい
     # @user.user_id = current_user.id
   end
