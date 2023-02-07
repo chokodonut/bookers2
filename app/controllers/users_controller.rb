@@ -22,7 +22,9 @@ class UsersController < ApplicationController
   end
 
   def index
-    @user_image = UserImage.all
+    @users = User.all
+    @book = Book.new
+    
   end
 
     private
