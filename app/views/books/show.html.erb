@@ -1,5 +1,5 @@
 <div id="notice">
-  <%= flash[:notice] %>
+
 </div>
 
 <div class="container px-5 px-sm-0">
@@ -64,7 +64,9 @@
               <%= link_to "Edit", edit_book_path(@book.id), class: "btn btn-sm btn-success" %>
             </td>
             <td>
+              <% if @book.user == current_user %>
               <%= link_to "Destroy",book_path(@book.id), method: :delete, "data-confirm" => "本当に削除しますか？", class: "btn btn-sm btn-danger" %>
+              <% end %>
             </td>
           </tr>
         </tbody>
