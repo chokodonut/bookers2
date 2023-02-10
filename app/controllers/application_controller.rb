@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   before_action :authenticate_user!, except: [:top]
-    # before_action :is_matching_login_user, only: [:edit]
+
   before_action :configure_permitted_parameters, if: :devise_controller?
 
   before_action :configure_permitted_parameters, if: :devise_controller?
